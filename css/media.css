@@ -1,0 +1,36 @@
+@media screen and (max-width: 767px) {
+  	 .header_img{
+    	    background-color:#000;top:-1px;
+    	  z-index:999;height:10%;position:fixed
+   	 }
+   	 .header_right{padding: 24px;}
+   	 .header_right_nav a{
+   	 		display: none;
+   	 }
+   	 
+   	 .header_right_nav{
+   	 		display:block;width:30px;height:30px;background:url(../images/menu.png) no-repeat;background-size:100%;
+   	 		cursor:pointer;
+   	 }
+   	 .container .header .phoneMune{background:#000;display:none;z-index:99;}
+	.container .header .phoneMune p{color:#fff;font-size:17px;height:30px;line-height: 30px;}
+	/*.container #skill{height:1060px!important;}*/
+	/*基本资料*/
+	.container #data{height:1000px!important;}
+	/*基本资料*/
+	.container #work{height:1000px!important;}
+	}
+	
+	
+	@media(min-width:768px) {
+.navbar-custom {
+	background:0 0;
+	padding: 20px 20px;
+	border-bottom: 0;
+	letter-spacing: 1px;
+	background: 0 0;
+	
+	-webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+	transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
