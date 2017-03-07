@@ -1,4 +1,4 @@
-body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,
+body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,.project_nav1 span
     td,th,button,strong,em,select,video,canvas{margin:0;padding:0;}
     li{list-style:none;vertical-align:top;}
     table{ border-collapse:collapse;}
@@ -9,7 +9,7 @@ body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,
     a,input{
     -webkit-appearance: none;/*屏蔽阴影*/
     -webkit-tap-highlight-color:rgba(0,0,0,0);
-    /*ios android去除自带阴影的样式*/
+    /*ios android去除自带阴影的样式 project_nav*/
     }
     a, img {
     /* 禁止长按链接与图片弹出菜单 */
@@ -66,16 +66,16 @@ body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,
 	
 	/*基本资料部分结束*/
 	/*项目经验开始*/
-	.container #project{width:100%;height:945px;background:linear-gradient(#fff 0%,#ddd 100%);text-align: center;}
+	.container #project{width:100%;background:linear-gradient(#fff 0%,#ddd 100%);text-align: center;}
 	.container #project h2{padding-top:70px;}
 	.container #project p{padding-top: 55px;}
 	.container #project .project_nav{height:60px;line-height:60px;padding-top:20px;}
-	.container #project .project_nav span{height:30px;line-height: 30px;}
-	.container #project .project_nav span:nth-of-type(1){background:#F4D03F;border-radius:5px;}
+	.container #project .project_nav span{height:30px;line-height: 30px;border-radius:5px;transition: all .5s;}
+	.container #project .project_nav span:nth-of-type(1){background:#F4D03F;}
 	
 	.container #project .project_nav span:hover{background:#F4D03F;cursor:pointer;border-radius:5px;}
 	.container #project .project_nav1{height:650px;}
-	.container #project .project_nav1 span{height:300px;position:relative}
+	.container #project .project_nav1 span{height:300px;position:relative;transition:all 2s;}
 	.container #project .project_nav1 span:hover{transform: scale(1.1);z-index:3;transition: all 0.5s;}
 	.container #project .project_nav1 span img{width:100%;height:100%;z-index:1}
 	.container #project .project_nav1 span .zhaoceng{width:100px;height:40%;z-index:2;position:absolute;left:50%;top:50%;margin-left:-50px;margin-top:-50px;display: none;}
@@ -96,6 +96,98 @@ body,ul,ol,p,h1,h2,h3,h4,h5,dl,dd,form,input,textarea,
 	.container #skill .row div .ab h3{display:inline-block;}
 	.container #skill .row div .ab p{display:inline-block;}
 	.container #skill .row div .ab{width:91%;padding-left:6%;}
+	
+	@-webkit-keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes bounceOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+.bounceOutUp {
+  -webkit-animation: bounceOutUp 2s forwards;
+  animation: bounceOutUp 2s forwards;
+}
+
+	@-webkit-keyframes bounceOutdown {
+  0% {
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bounceOutdown {
+  0% {
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+.bounceOutdown {
+  -webkit-animation: bounceOutUp 2s;
+  animation: bounceOutUp 2s;
+}
 	/*项目经验结束*/
 	/*工作经历开始*/
 		.container #work{width:100%;height:500px;background:#fff;text-align: center;}

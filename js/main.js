@@ -20,24 +20,24 @@
     		$('.header_right_nav').click(function(){
     			$('.container .header .phoneMune').slideToggle(200)
     		})
-//		计算移动端#project的高度开始
-    		var spanHeight=$('.project_nav1 span').height();
-    		var spanLength=$('.project_nav1').children().length
-    		var projectHeight=spanHeight*spanLength+300+'px';
-    		if($(document).width()>=757){
-    				$('#project').height('900')
-    			}else{
-//  				$('#project').height(projectHeight)
-						$('#project').css({'height':projectHeight})
-    			}
-			$(window).resize(function(){
-				if($(document).width()>=757){
-    				$('#project').height('900')
-    			}else{
-//  				$('#project').height(projectHeight)
-						$('#project').css({'height':projectHeight})
-    			}
-			})
+//		计算移动端#project的高度开始project
+//  		var spanHeight=$('.project_nav1 span').height();
+//  		var spanLength=$('.project_nav1').children().length
+//  		var projectHeight=spanHeight*spanLength+300+'px';
+//  		if($(document).width()>=757){
+//  				$('#project').height('900')
+//  			}else{
+//
+//						$('#project').css({'height':projectHeight})
+//  			}
+//			$(window).resize(function(){
+//				if($(document).width()>=757){
+//  				$('#project').height('900')
+//  			}else{
+//
+//						$('#project').css({'height':projectHeight})
+//  			}
+//			})
     		//		计算移动端#project的高度结束
     		$('.container #project .project_nav1 span').hover(function(){
     			$(this).css({'background':'#000'})
@@ -178,6 +178,64 @@
 			
 			
 //	发送邮件结束
+//所有,pc端,响应式,移动端开始bounceOutUp  #F4D03F
+			function fn1(index){
+				var projectnavspan=$('#project .project_nav span');
+				projectnavspan.each(function(){
+									projectnavspan.css('background','#fff')
+								})
+				projectnavspan[index].style.background='#F4D03F'
+			}
+				
+			$('#project .project_nav #all').click(function(){
+				fn1(0)
+				$('.project_nav1 span').fadeIn(1000)
+			})
+			$('#project .project_nav #pcd').click(function(){
+				fn1(1)
+//				$(".project_nav1 .pcd").addClass('bounceOutUp').fadeOut(1000);
+				$(".project_nav1 .pcd").show();
+				$(".project_nav1 .phoned,.xiangying").hide()
+			})
+			$('#project .project_nav #phoned').click(function(){
+				fn1(2)
+//				$(".project_nav1 .phoned").addClass('bounceOutUp').fadeOut(1000);
+				$(".project_nav1 .phoned").show();
+				$(".project_nav1 .pcd,.xiangying").hide()
+			})
+			$('#project .project_nav #xiangying').click(function(){
+				fn1(3)
+//				$(".project_nav1 .xiangying").addClass('bounceOutUp').fadeOut(1000);
+					$(".project_nav1 .xiangying").show();
+				$(".project_nav1 .pcd,.phoned").hide()
+			})
+//			$('#project .project_nav').click(function(e){
+//				var e=e||event;
+//				var target=e.target||e.srcElement;
+//				var targetid=target.id;
+//				var projectnavspan=$('#project .project_nav span')
+//				projectnavspan.each(function(){
+//					projectnavspan.css('background','#fff')
+//				})
+//				console.log(projectnavspan[1])
+//				
+//				if(targetid==='all'){
+//					$('.project_nav1 span').fadeIn()
+//					projectnavspan[0].style.background='#F4D03F'
+//				}else if(targetid==='pcd'){
+//					$(".project_nav1 .pcd").addClass('bounceOutUp').fadeOut(1000);
+//					projectnavspan[1].style.background='#F4D03F'
+//				}else if(targetid==='phoned'){
+//					
+//					$(".project_nav1 .phoned").addClass('bounceOutUp').fadeOut(1000);
+//					projectnavspan[2].style.background='#F4D03F'
+//				}else if(targetid==='xiangying'){
+//					$(".project_nav1 .xiangying").addClass('bounceOutUp').fadeOut(1000);
+//					projectnavspan[3].style.background='#F4D03F'
+//				}
+//			})
+				
+//所有,pc端,响应式,移动端结束
     	})
 
 
