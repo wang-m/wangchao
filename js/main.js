@@ -61,6 +61,25 @@
 					
 				})
 //专业技能高度结束
+//项目经验下面span元素屏幕小于400px时,显示一列  开始
+			var windowWidth=null;
+				windowWidth=$(window).width();
+			
+				if(windowWidth<350){
+					$('#project .project_nav1 span').width('70%')
+				}else{return false;}
+			
+			$(window).resize(function(){
+				windowWidth=$(window).width();
+			
+				if(windowWidth<350){
+					$('#project .project_nav1 span').width('70%')
+				}else{return false;}
+			})
+			
+
+				
+//项目经验下面span元素屏幕小于400px时,显示一列  结束
 		})
  
  			$('.container #project .project_nav1 span').hover(function(){
